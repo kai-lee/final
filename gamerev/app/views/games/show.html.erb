@@ -12,7 +12,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @game.type %>
+  <%= @game.gtype %>
 </p>
 
 <p>
@@ -26,8 +26,8 @@
 </p>
 
 <p>
-  <strong>Userid:</strong>
-  <%= @game.userid %>
+  <strong>User_id:</strong>
+  <%= @game.user_id %>
 </p>
 
 <h3>Comments</h3>
@@ -46,5 +46,6 @@
 <p><%= link_to 'All Games', root_path %> </p>
 
 
-
+<% if user_signed_in? %>
 <p><%= link_to 'New Comment', new_game_review_path(@game) %></p>
+<% end %>

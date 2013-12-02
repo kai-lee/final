@@ -14,17 +14,19 @@
 ActiveRecord::Schema.define(version: 20131202162042) do
 
   create_table "games", force: true do |t|
+    t.integer  "game_id"
     t.string   "picture"
     t.string   "name"
-    t.string   "type"
+    t.string   "gtype"
     t.integer  "rating"
     t.text     "description"
-    t.integer  "userid"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "reviews", force: true do |t|
+    t.string   "user_id"
     t.string   "comment"
     t.integer  "game_id"
     t.datetime "created_at"

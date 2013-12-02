@@ -4,7 +4,7 @@ Gamerev::Application.routes.draw do
   #resources :games
 
 resources :games do
-	resources :tags, :shallow => true
+	resources :reviews, :shallow => true
 end
 
 

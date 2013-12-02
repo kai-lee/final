@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_review, only: [ :edit, :update, :destroy]
 
   # GET /reviews
   # GET /reviews.json
@@ -10,7 +10,8 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
-  end
+@review = Review.find(params[:id])  
+end
 
   # GET /reviews/new
   def new
@@ -35,7 +36,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
+        format.html { redirect_to @game, notice: 'Review was successfully created.' }
         format.json { render action: 'show', status: :created, location: @review }
       else
         format.html { render action: 'new' }
@@ -73,8 +74,9 @@ class ReviewsController < ApplicationController
     def set_review
     #  @review = Review.find(params[:id])
     
-@game = Game.find(params[:game_id])
-@review = @game.reviews.find(params[:id])
+		@game = Game.find(params[:game_id])
+		@review = @game.reviews.find(params[:id])
+		@review = Review.find(params[:id])
 	end
 
     # Never trust parameters from the scary internet, only allow the white list through.

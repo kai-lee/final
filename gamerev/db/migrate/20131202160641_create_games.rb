@@ -1,12 +1,13 @@
 class CreateGames < ActiveRecord::Migration
   def change
     create_table :games do |t|
+      t.integer :game_id
       t.string :picture
       t.string :name
-      t.string :type
+      t.string :gtype
       t.integer :rating
       t.text :description
-      t.integer :userid
+      t.integer :user_id
 
       t.timestamps
     end

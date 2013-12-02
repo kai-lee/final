@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@game.picture, :width => 200) if @game.picture.present? %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @game.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @game.type %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @game.rating %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @game.description %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @game.userid %>
+</p>
+
+<h3>Comments</h3>
+<table>
+<tr>
+<th>Comment<th>
+</tr>
+
+<% @game.reviews.each do |review| %>
+<tr>
+<td><%= review.comment %></td>
+</tr>
+<% end %>
+</table>
+
+<p><%= link_to 'All Games', root_path %> </p>
+
+
+
+<p><%= link_to 'New Comment', new_game_review_path(@game) %></p>

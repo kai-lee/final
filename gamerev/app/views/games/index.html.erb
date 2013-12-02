@@ -1,0 +1,36 @@
+<h1>Listing games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Picture</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Rating</th>
+      <th>Description</th>
+      <th>Userid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= image_tag(game.picture_url, :width => 200) if game.picture.present? %></td>
+        <td><%= link_to game.name, game %></td>
+        <td><%= game.type %></td>
+        <td><%= game.rating %></td>
+        <td><%= game.description %></td>
+        <td><%= game.userid %></td>
+        <td><%= link_to 'Edit', edit_game_path(game) %></td>
+        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game', new_game_path %>

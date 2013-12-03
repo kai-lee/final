@@ -11,6 +11,8 @@
  *= require_self
  *= require_tree .
  */
+*= require twitter/bootstrap
+
 
 table { 
 border-collapse: collapse;

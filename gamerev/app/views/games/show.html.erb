@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= image_tag(@game.picture, :width => 200) if @game.picture.present? %>
+  <%= image_tag(@game.picture, :width => 800) if @game.picture.present? %>
 </p>
 
 <p>
@@ -25,15 +24,10 @@
   <%= @game.description %>
 </p>
 
-<p>
-  <strong>User_id:</strong>
-  <%= @game.user_id %>
-</p>
-
 <h3>Comments</h3>
 <table>
 <tr>
-<th>Comment<th>
+<th><th>
 </tr>
 
 <% @game.reviews.each do |review| %>
@@ -43,9 +37,8 @@
 <% end %>
 </table>
 
-<p><%= link_to 'All Games', root_path %> </p>
-
-
 <% if user_signed_in? %>
 <p><%= link_to 'New Comment', new_game_review_path(@game) %></p>
 <% end %>
+
+<p><%= link_to 'All Games', root_path %></p>

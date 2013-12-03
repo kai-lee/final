@@ -8,6 +8,9 @@ gem 'sqlite3'
 gem 'devise'
 gem 'protected_attributes'
 gem 'carrierwave'
+gem 'less-rails-bootstrap'
+gem 'therubyracer'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

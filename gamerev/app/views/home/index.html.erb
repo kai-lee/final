@@ -1,4 +1,16 @@
-<h1>Listing games</h1>
+
+<h1>Games</h1>
+
+<div id="searchbar">
+Search <%= form_tag(root_path, :method => 'get') do %>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag "Search", :name => nil  %>
+<% end %>
+</div>
+
+
+<h2>Listing games</h2>
+
 
 <table>
   <thead>
@@ -36,3 +48,4 @@
 <% else %>
 You must be signed in to add a game review
 <% end %>
+

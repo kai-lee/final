@@ -1,9 +1,13 @@
 class HomeController < ApplicationController
 helper_method :sort_column, :sort_direction
   def index
-#	@games = Game.all
-	@games = Game.order(sort_column + " " + sort_direction) 
 
+#	@games = Game.all
+	if params[:search]
+	@games = Game.search(params[:search])
+	else
+	@games = Game.order(sort_column + " " + sort_direction) 
+	end
  end
 
 #private 

@@ -9,4 +9,10 @@ validates_uniqueness_of :name
 validates_presence_of :user_id
 validates_presence_of :description
 
+
+def self.search(search)
+find(:all, :conditions => ['name LIKE :search OR rating LIKE :search OR gtype LIKE :search',{:search => "%#{search}%"}])
+end
+
+
 end

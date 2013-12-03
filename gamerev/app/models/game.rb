@@ -1,5 +1,6 @@
 class Game < ActiveRecord::Base
 mount_uploader :picture, PictureUploader
+mount_uploader :apic, PictureUploader
 has_many :reviews, :dependent => :destroy
 belongs_to :user
 

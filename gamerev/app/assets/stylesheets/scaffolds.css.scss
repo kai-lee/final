@@ -1,11 +1,3 @@
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -13,36 +5,42 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: #EDEDED;
   padding: 10px;
   font-size: 11px;
 }
 
 a {
-  color: #000;
+  color: #000000;
   &:visited {
-    color: #666;
+    color: #000000;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #000000;
+    background-color: #EDEDED;
   }
 }
 
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+	color:black; 
   }
 }
 
 #notice {
   color: green;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
+	margin-left: auto;
+	margin-right: auto;
+
 }
 
 #error_explanation {
@@ -52,18 +50,10 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-  }
+  margin-left: auto;
+margin-right: auto;
   ul li {
     font-size: 12px;
-    list-style: square;
-  }
+    list-style: square;  
+}
 }

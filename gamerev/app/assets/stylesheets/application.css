@@ -1,4 +1,4 @@
-/*
+\/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -11,15 +11,114 @@
  *= require_self
  *= require_tree .
  */
-*= require twitter/bootstrap
+
+#userlog {
+width: 100%;
+color: white;
+background-color:white;
+padding: 5px;
+font-size: 16px;
+margin-left: auto;
+margin right: auto;
+}
+
+#userlog:link {color: #FFFFFF;}
+#userlog:visisted {color: #FFFFFF;}
+#userlog:hover{color: #FFFFFF;}
+#userlog:active{color: #FFFFFF;}
 
 
 table { 
 border-collapse: collapse;
 border: 1px solid #000000;
+background-color: #EDEDED;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 30px;
 }
 
 td {
 border: 1px solid #000000;
 padding: 1em;
+}
+
+
+ul li  {
+left:10px;
+top:50px;
+width: 100%;
+font-size: 12px;
+color: black;
+background-color: #EDEDED;
+}
+
+body {
+background-image: url('http://i43.tinypic.com/3028mxe.jpg');
+color: #EDEDED;
+text-align: center;
+}
+
+#image {
+padding-top: 20px;
+margin-right: auto;
+margin-left: auto;
+}
+
+h1 {
+text-decoration:underline;
+color:white;
+margin-left:auto;
+margin-right:auto;
+}
+
+h2 {
+color: white;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+table#table2 {
+position:fixed;
+top:15px;
+background-color: #EDEDED;
+margin-left: 70%;
+text-align:right;
+font-size: 6px;
+}
+
+table#table3 {
+position: fixed;
+top: 15px;
+background-color: #EDEDED;
+margin-left: 10px;
+text-align: left;
+color: black;
+font-size: 22px;
+margin-bottom:30px;
+}
+
+
+
+table, td, th {
+color: black;
+}
+
+th {
+color: black;
+font-size: 25px;
+}
+
+#footer {
+position:fixed;
+bottom: 0;
+left: 0;
+right:0;
+padding-top:2px;
+height:30px;
+width: 100%;
+text-align: center;
+background-color: #000000;
+color: white;
+font-size:16px;
 }

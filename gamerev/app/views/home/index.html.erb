@@ -15,7 +15,7 @@ Search <%= form_tag(root_path, :method => 'get') do %>
 <table>
   <thead>
     <tr>
-      <th>Picture</th>
+      <th></th>
       <th><%= sortable "name", "Name" %></th>
       <th><%= sortable "type", "Type" %></th>
       <th><%= sortable "rating", "Rating" %></th>
@@ -43,9 +43,14 @@ Search <%= form_tag(root_path, :method => 'get') do %>
 </table>
 
 <br>
-<% if user_signed_in? %>
-<%= link_to 'New Game', new_game_path %>
-<% else %>
-You must be signed in to add a game review
-<% end %>
 
+<table id="table3">
+
+<tr>
+<% if user_signed_in? %>
+<td><%= link_to 'New Game', new_game_path %></td>
+<% else %>
+<td>You must be signed in to add a game review</td>
+<% end %>
+</tr>
+</table>

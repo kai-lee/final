@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= image_tag(@game.picture, :width => 800) if @game.picture.present? %>
+  <%= image_tag(@game.picture, :width => 600) if @game.picture.present? %>
 </p>
 
 <p>
@@ -37,8 +37,16 @@
 <% end %>
 </table>
 
+
+
+<table>
+<thead>
+<tr>
 <% if user_signed_in? %>
-<p><%= link_to 'New Comment', new_game_review_path(@game) %></p>
+<th><%= link_to 'New Comment', new_game_review_path(@game) %> |</th>
 <% end %>
 
-<p><%= link_to 'All Games', root_path %></p>
+<th><%= link_to 'All Games', root_path %></th>
+</tr>
+</thead>
+</table>

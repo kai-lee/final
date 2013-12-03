@@ -1,4 +1,6 @@
 Gamerev::Application.routes.draw do
+  resources :additionals
+
   get "home/index"
   resources :reviews
   #resources :games
